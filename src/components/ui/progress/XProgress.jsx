@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import './style.css';
-export function XProgress({
+export function XProgressRoot({
 	children,
 	className,
 	type = 'bar',
@@ -88,7 +88,11 @@ export function XProgress({
 					width: diameter,
 					height: diameter,
 				}}
-				className={classNames('x-progress-circular', className)}
+				className={classNames('x-progress-circular', className, {
+					'x-progress-circular--indeterminate': indeterminate,
+					'x-progress-circular--reverse': reverse,
+					[`text-${color}`]: color,
+				})}
 			>
 				<svg
 					style={{
@@ -109,9 +113,7 @@ export function XProgress({
 					/>
 
 					<circle
-						className={classNames('x-progress-circular__overlay', {
-							[`text-${color}`]: color,
-						})}
+						className={classNames('x-progress-circular__overlay')}
 						fill="transparent"
 						cx="50%"
 						cy="50%"
@@ -121,9 +123,7 @@ export function XProgress({
 						strokeDashoffset={strokeDashOffset}
 					/>
 				</svg>
-				{!indeterminate && children && (
-					<div className="x-progress-circular__label">{children}</div>
-				)}
+				{children && <div className="x-progress-circular__label">{children}</div>}
 				{!indeterminate && !children && label && (
 					<div className="x-progress-circular__label">{value}%</div>
 				)}
@@ -134,7 +134,9 @@ export function XProgress({
 	return type === 'bar' ? progressBar() : progressCircle();
 }
 
-XProgress.propTypes = {
+export const XProgress = memo(XProgressRoot);
+
+XProgressRoot.propTypes = {
 	children: PropTypes.node,
 	className: PropTypes.string,
 	type: PropTypes.oneOf(['bar', 'circle']),

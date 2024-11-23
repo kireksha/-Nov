@@ -19,7 +19,7 @@
 	transition: transform ease-in-out 0.2s;
 }
 .x-accordion-content {
-	transition: height ease 0.2s;
+	transition: height ease-in-out 0.2s;
 	overflow: hidden;
 	border-top: 1px solid currentColor;
 }
