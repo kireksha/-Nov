@@ -1,3 +1,24 @@
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src:
+		local('Inter'),
+		url('../fonts/Inter-Regular.woff2') format('woff2'),
+		url('../fonts/Inter-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-weight: 900;
+	font-display: swap;
+	src:
+		local('Inter'),
+		url('../fonts/Inter-BlackItalic.woff2') format('woff2'),
+		url('../fonts/Inter-BlackItalic.woff') format('woff');
+}
 :root {
 	--color-primary: #1976d2;
 	--color-secondary: #5cbbf6;
@@ -48,4 +69,14 @@
 }
 .text-warning {
 	color: var(--color-warning) !important;
+
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+
+a, button {
+	transition: all .2s ease-in-out;
 }
