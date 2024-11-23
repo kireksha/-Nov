@@ -1,0 +1,11 @@
+.x-accordion-tab {
+}
+.x-accordion-header {
+}
+.x-accordion-content {
+	display: none;
+}
+
+.x-accordion-tab--expanded .x-accordion-content {
+	display: block;
+}
