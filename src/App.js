@@ -9,7 +9,7 @@ export const App = () => {
 	return (
 		<>
 			<div className="App">
-				<XDropdown label="Cl">
+				<XDropdown>
 					<p>dlkfhgdflkgjfdkgl</p>
 				</XDropdown>
 			</div>
