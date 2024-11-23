@@ -29,4 +29,12 @@ export const Socials = styled(SocialsContainer)`
 	height: 81px;
 	align-items: center;
 	justify-content: space-between;
+
+	& li {
+		transition: transform .2s ease-in-out;
+	}
+
+	& li:active {
+		transform: translate(2px, 2px);
+	}
 `;
