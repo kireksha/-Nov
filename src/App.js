@@ -1,7 +1,8 @@
-import { Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components';
 import {MainPage } from './Pages';
 import styled from 'styled-components';
+import { Badge } from './component leo';
 
 const Content = styled.div`
 	margin: 0 auto;
@@ -28,8 +29,10 @@ export const AppContainer = ({ className }) => {
 				</Routes>
 			</Content>
 			<Footer />
+			<Badge />
 		</div>
 	);
+
 };
 
 export const App = styled(AppContainer)`
