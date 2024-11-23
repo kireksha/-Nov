@@ -15,8 +15,8 @@ const MainPageContainer = styled.div`
 		grid-gap: 20px;
 	}
 	img {
-		width: 40%;
-		height: 70%;
+		width: 50%;
+		height: 60%;
 		object-fit: cover;
 		border-radius: 50%;
 					box-shadow: 15px 10px 10px 5px rgba(0, 0, 0, 0.75);

@@ -16,7 +16,7 @@ const HeaderContainer = ({ className }) => {
 };
 
 export const Header = styled(HeaderContainer)`
-	padding: 52px 45px;
+	padding: 50px 45px;
 	background-color: rgba(117, 112, 255, 0.61);
 	box-shadow: 15px 10px 10px 5px rgba(0, 0, 0, 0.75);
 
@@ -24,14 +24,9 @@ export const Header = styled(HeaderContainer)`
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
 	}
 
 	& li:not(:last-child) {
 		margin-right: 40px;
-	}
-
-	& li:last-child {
-		padding: 15px 50px;
 	}
 `;
