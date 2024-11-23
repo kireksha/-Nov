@@ -10,7 +10,7 @@ const Content = styled.div`
 
 export const AppContainer = ({ className }) => {
 	return (
-		<>
+		<div className={className}>
 			<Header />
 			<Content>
 				<h2>162 ГРУППА БУДУЩИХ ВЫПУСКНИКОВ RESULT UNIVERSITY</h2>
@@ -28,8 +28,13 @@ export const AppContainer = ({ className }) => {
 				</Routes>
 			</Content>
 			<Footer />
-		</>
+		</div>
 	);
 };
 
-export const App = styled(AppContainer)``;
+export const App = styled(AppContainer)`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+`;
