@@ -1,0 +1,22 @@
+.x-dropdown {
+	display: inline-block;
+	position: relative;
+}
+
+.x-dropdown__menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 100;
+	display: none;
+}
+.x-dropdown__btn {
+	background: transparent;
+	border: 0;
+	height: 30px;
+	width: 30px;
+}
+.x-dropdown--open .x-dropdown__menu {
+	display: block;
+	border: 1px solid #ccc;
+}
