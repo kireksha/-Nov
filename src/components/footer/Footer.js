@@ -31,6 +31,13 @@ export const Footer = styled(FooterContainer)`
 		font-size: 32px;
 		font-style: italic;
 	}
+ & a:hover {
+		opacity: .5;
+	}
+
+	& a:active {
+		transform: translate(2px, 2px);
+	}
 >>>>>>> 84182a796ba19c292156d9b16ce1270eb9b53f73
 `;
 
