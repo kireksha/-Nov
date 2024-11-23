@@ -149,6 +149,7 @@ XProgress.propTypes = {
 		'negative',
 		'positive',
 		'info',
+		'warning',
 	]),
 	label: PropTypes.bool,
 	stripe: PropTypes.bool,
