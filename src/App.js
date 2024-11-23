@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Header, Footer } from './components';
+import { Header, Footer, Badge } from './components';
 import {MainPage } from './Pages';
 import styled from 'styled-components';
 
@@ -28,6 +28,7 @@ export const AppContainer = ({ className }) => {
 				</Routes>
 			</Content>
 			<Footer />
+			<Badge />
 		</div>
 	);
 };
