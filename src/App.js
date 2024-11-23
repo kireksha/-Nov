@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components';
 import styled from 'styled-components';
+import { Badge } from './component leo';
 
 const Content = styled.div`
-	width: 100%;
 	margin: 0 auto;
 	text-align: center;
 `;
@@ -28,8 +28,10 @@ export const AppContainer = ({ className }) => {
 				</Routes>
 			</Content>
 			<Footer />
+			<Badge />
 		</>
 	);
+
 };
 
 export const App = styled(AppContainer)``;

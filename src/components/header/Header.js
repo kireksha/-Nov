@@ -16,7 +16,7 @@ const HeaderContainer = ({ className }) => {
 };
 
 export const Header = styled(HeaderContainer)`
-	padding: 52px 45px;
+	padding: 50px 45px;
 	background-color: rgba(117, 112, 255, 0.61);
 
 	& .list-link {
@@ -27,9 +27,5 @@ export const Header = styled(HeaderContainer)`
 
 	& li:not(:last-child) {
 		margin-right: 40px;
-	}
-
-	& li:last-child {
-		padding: 15px 50px;
 	}
 `;

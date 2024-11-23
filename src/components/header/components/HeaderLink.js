@@ -5,9 +5,9 @@ const HeaderLinkContainer = ({ className, children, linkAddress, href }) => {
 	return (
 		<li className={className}>
 			{linkAddress
-			? <Link to={linkAddress}>{children}</Link>
-			: <a rel='noreferrer' href={href} target='_blank'>{children}</a>
-		}
+				? <Link to={linkAddress}>{children}</Link>
+				: <a rel='noreferrer' href={href} target='_blank'>{children}</a>
+			}
 		</li>
 	);
 };
