@@ -23,9 +23,7 @@ export const Footer = styled(FooterContainer)`
 	width: 100%;
 	height: 200px;
 	background-color: rgba(117, 112, 255, 0.61);
-<<<<<<< HEAD
 	box-shadow: 15px -10px 10px 5px rgba(0, 0, 0, 0.75);
-=======
 
 	& a {
 		font-size: 32px;
@@ -38,7 +36,6 @@ export const Footer = styled(FooterContainer)`
 	& a:active {
 		transform: translate(2px, 2px);
 	}
->>>>>>> 84182a796ba19c292156d9b16ce1270eb9b53f73
 `;
 
 
