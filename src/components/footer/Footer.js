@@ -1,5 +1,6 @@
-import styled from 'styled-components';
 import { Socials } from './components/socials';
+import styled from 'styled-components';
+
 
 const FooterContainer = ({ className }) => {
 	return (
@@ -7,7 +8,7 @@ const FooterContainer = ({ className }) => {
 			<a rel="noreferrer" href="https://result.school/" target="_blank">
 				RESULT UNIVERSITY 2025
 			</a>
-				<Socials className="socials" />
+			<Socials className="socials" />
 		</footer>
 	);
 };
