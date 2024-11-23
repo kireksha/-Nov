@@ -18,11 +18,13 @@ const HeaderContainer = ({ className }) => {
 export const Header = styled(HeaderContainer)`
 	padding: 52px 45px;
 	background-color: rgba(117, 112, 255, 0.61);
+	box-shadow: 15px 10px 10px 5px rgba(0, 0, 0, 0.75);
 
 	& .list-link {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
 	}
 
 	& li:not(:last-child) {

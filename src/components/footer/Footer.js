@@ -20,4 +20,7 @@ export const Footer = styled(FooterContainer)`
 	width: 100%;
 	height: 200px;
 	background-color: rgba(117, 112, 255, 0.61);
+	box-shadow: 15px -10px 10px 5px rgba(0, 0, 0, 0.75);
 `;
+
+
