@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 import { ReactComponent as Sheriff } from './image/sheriff.svg'
 import { ReactComponent as Support } from './image/support.svg'
+import { ROLE } from './Role';
 
-const BadgeContainer = ({ className, timlid }) => {
+
+const BadgeContainer = ({ className, roleId }) => {
 
 	const Div = styled.div`
 		display: flex;
@@ -12,8 +14,11 @@ const BadgeContainer = ({ className, timlid }) => {
 
 	return (
 		<Div className={className}>
-			<button className='button' onClick={() => { alert('Текст') }}><Sheriff width="35px" height="35px" /></button>
-			<button className='button'><Support width="35px" height="35px" /></button>
+			{roleId === ROLE.TEAMLEAD ? (
+				<button className='button' onClick={() => { alert('Текст') }}><Sheriff width="35px" height="35px" /></button>)
+				: (<button className='button' onClick={() => { alert('Текст') }}><Support width="35px" height="35px" /></button>
+				)
+			}
 		</Div>
 	)
 }
