@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 
-// в пропсы кидается объект юзера при мэпе
+// в пропсы кидается объект юзера 
 const FavoriteContainer = ({ className, user }) => {
 	const [isFavorite, setIsFavorite] = useState(false);
 
