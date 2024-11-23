@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { Header, Footer } from './components';
+import {MainPage } from './Pages';
 import styled from 'styled-components';
 
 const Content = styled.div`
@@ -14,7 +15,7 @@ export const AppContainer = ({ className }) => {
 			<Content>
 				<h2>162 ГРУППА БУДУЩИХ ВЫПУСКНИКОВ RESULT UNIVERSITY</h2>
 				<Routes>
-					<Route path="/" element={<div>Главная страница</div>} />
+					<Route path="/" element={<MainPage/>} />
 					<Route
 						path="/coders/:id"
 						element={<div>Открытая страница программиста по id</div>}

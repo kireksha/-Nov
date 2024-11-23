@@ -5,42 +5,42 @@
 			"name": "Азат Радифович",
 			"birth": "1997",
 			"about": "Возможно мой год рождения указан неверно...",
-			"avatar": "/src/pictures/avatars/test1.png"
+			"avatar": "https://sun9-16.userapi.com/s/v1/ig2/3-gW8lK28pk9Y89KrRm-YDUaIKZdNVvKlG38FmzdJVQRspjKLbKLTh6bl5DlGiRIWd_1Krbf-ehzyjXV_VA88BBh.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=N_-CjkjqpyAIiAcLioau3QIW_8XydOHhNzMtXyAyIms&cs=200x267"
 		},
 		{
 			"id": "002",
 			"name": "Денис",
 			"birth": "1995",
 			"about": "Заложил отправную точку в виде дизайна",
-			"avatar": "/src/pictures/avatars/test.png"
+			"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuBJ-H8sMwJ-zrDkspzEHMHbY0e8Cacpba_A&s"
 		},
 		{
 			"id": "003",
 			"name": "Кирилл Шакин",
 			"birth": "1998",
 			"about": "Вызвался быть Тим-Лидом без опыта разработки",
-			"avatar": "https://gavrilov-yam.zdrav76.ru/wp-content/uploads/2018/03/int-1024x768.jpg"
+			"avatar": "https://sun7-21.userapi.com/impg/uwy_90uGJL7wlATROjdCfP4jmbB_eJCVvJBYuw/q3Qp7orDWTE.jpg?size=1333x2000&quality=96&sign=50e17836e221d2a7a06791da23799c70&type=album"
 		},
 		{
 			"id": "004",
 			"name": "Леонид Бородич",
 			"birth": "1999",
 			"about": "Активно принимает участие в группе за пределами Хакатона",
-			"avatar": "/src/pictures/avatars/test1.jpg"
+			"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuBJ-H8sMwJ-zrDkspzEHMHbY0e8Cacpba_A&s"
 		},
 		{
 			"id": "005",
 			"name": "Светослав",
 			"birth": "1999",
 			"about": "У всех Свят, а у него Свет",
-			"avatar": "/src/pictures/avatars/test.png"
+			"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuBJ-H8sMwJ-zrDkspzEHMHbY0e8Cacpba_A&s"
 		},
 		{
 			"id": "006",
 			"name": "Сергей Дроздов",
 			"birth": "1994",
 			"about": "Говорит только по делу",
-			"avatar": "/src/pictures/avatars/test.png"
+			"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuBJ-H8sMwJ-zrDkspzEHMHbY0e8Cacpba_A&s"
 		}
 	],
 	"role": [
