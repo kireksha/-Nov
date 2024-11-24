@@ -1,5 +1,4 @@
 .x-accordion-tab {
-	border: 1px solid currentColor;
 }
 .x-accordion-header {
 	cursor: pointer;
@@ -21,7 +20,6 @@
 .x-accordion-content {
 	transition: height ease-in-out 0.2s;
 	overflow: hidden;
-	border-top: 1px solid currentColor;
 }
 
 .x-accordion-tab--expanded {
@@ -29,6 +27,7 @@
 		transform: rotate(90deg);
 	}
 	.x-accordion-content {
+		border-top: 1px solid currentColor;
 		padding: 8px;
 	}
 }

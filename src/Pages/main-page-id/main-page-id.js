@@ -1,12 +1,18 @@
-import styled from 'styled-components';
 import { useEffect } from 'react';
-import { requestGetCoder, requestGetSocials } from './requests';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { SelectCoder, SelectClickMoreAboutMe, SelectSocials } from '../../selectors';
-import SocialsLogoVK from '../../pictures/socials/VK.svg';
-import SocialsLogoTG from '../../pictures/socials/Telegram.svg';
+import styled from 'styled-components';
+import { XAccordionTab, XProgress } from '../../components/ui';
 import SocialsLogoInstagram from '../../pictures/socials/Instagram.svg';
+import SocialsLogoTG from '../../pictures/socials/Telegram.svg';
+import SocialsLogoVK from '../../pictures/socials/VK.svg';
+import {
+	SelectClickMoreAboutMe,
+	SelectCoder,
+	SelectSkills,
+	SelectSocials,
+} from '../../selectors';
+import { requestGetCoder, requestGetSkills, requestGetSocials } from './requests';
 
 const MainPageIdContainer = styled.div`
 	width: 100vw;
@@ -16,6 +22,7 @@ const MainPageIdContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
+	padding-bottom: 24px;
 	button {
 		width: 200px;
 		height: 50px;
@@ -117,12 +124,21 @@ const AboutMeContainer = styled.div`
 		margin: 0;
 	}
 `;
-const ProgressBarContainer = styled.div``;
+const ProgressBarContainer = styled.div`
+	display: flex;
+	justifycontent: space-around;
+	gap: 6px;
+`;
+const LabelSkill = styled.h3`
+	margin: 6px 0 0;
+	text-align: center;
+`;
 /*стили для контейнера progressBar*/
 export const MainPageId = () => {
 	const coder = useSelector(SelectCoder);
 	const clickMoreAboutMe = useSelector(SelectClickMoreAboutMe);
 	const socials = useSelector(SelectSocials);
+	const skills = useSelector(SelectSkills);
 	const dispatch = useDispatch();
 	const { id } = useParams();
 	useEffect(() => {
@@ -132,8 +148,11 @@ export const MainPageId = () => {
 		requestGetSocials(id).then((data) =>
 			dispatch({ type: 'SET_SOCIALS', payload: data }),
 		);
+		requestGetSkills(id).then((data) =>
+			dispatch({ type: 'SET_SKILLS', payload: data }),
+		);
 	}, [id, dispatch]);
-
+	console.log(skills);
 	return (
 		<MainPageIdContainer>
 			<Header>
@@ -175,10 +194,55 @@ export const MainPageId = () => {
 					<p>{coder.about}</p>
 				</AboutMeContainer>
 			)}
-			<ProgressBarContainer>
-				<p>Тут будет progress bar</p>
-				{/* место для того, кто делает progress bar*/}
-			</ProgressBarContainer>
+
+			<XAccordionTab header="Мой прогресс">
+				<ProgressBarContainer>
+					<div>
+						<XProgress
+							type="circle"
+							value={skills.html}
+							size={128}
+							thickness={10}
+							color="negative"
+							label
+						/>
+						<LabelSkill>HTML</LabelSkill>
+					</div>
+					<div>
+						<XProgress
+							type="circle"
+							value={skills.css}
+							size={128}
+							thickness={10}
+							color="secondary"
+							label
+						/>
+						<LabelSkill>CSS</LabelSkill>
+					</div>
+					<div>
+						<XProgress
+							type="circle"
+							value={skills.javascript}
+							size={128}
+							thickness={10}
+							color="warning"
+							label
+						/>
+						<LabelSkill>JavaScript</LabelSkill>
+					</div>
+					<div>
+						<XProgress
+							type="circle"
+							value={skills.react}
+							size={128}
+							thickness={10}
+							color="info"
+							label
+						/>
+						<LabelSkill>React</LabelSkill>
+					</div>
+				</ProgressBarContainer>
+			</XAccordionTab>
 		</MainPageIdContainer>
 	);
 };

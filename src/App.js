@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Header, Footer, Badge } from './components';
-import {MainPage, MainPageId, FavoritePage } from './Pages';
 import styled from 'styled-components';
 import { Badge, Footer, Header } from './components';
-import { MainPage } from './Pages';
+import { FavoritePage, MainPage, MainPageId } from './Pages';
 
 const Content = styled.div`
 	margin: 0 auto;
@@ -22,14 +20,8 @@ export const AppContainer = ({ className }) => {
 			<Content>
 				<Routes>
 					<Route path="/" element={<MainPage />} />
-					<Route
-						path="/coders/:id"
-						element={<MainPageId />}
-					/>
-					<Route
-						path="/favorites"
-						element={<FavoritePage />}
-					/>
+					<Route path="/coders/:id" element={<MainPageId />} />
+					<Route path="/favorites" element={<FavoritePage />} />
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
 			</Content>
