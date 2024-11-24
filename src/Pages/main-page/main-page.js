@@ -2,7 +2,9 @@ import { requestGetAllCoders } from './request-get-all-coders/request-get-all-co
 import { Favorite, SearchSort, SimpleCarousel } from './components';
 import { Badge } from '../../components';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { SelectCoders } from '../../selectors';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 const MainPageContainer = styled.div`
@@ -70,10 +72,11 @@ const MainPageContainer = styled.div`
 `;
 
 export const MainPage = () => {
-	const [coders, setCoders] = useState([]);
+	const coders = useSelector(SelectCoders);
+	const dispatch = useDispatch();
 	useEffect(() => {
-		requestGetAllCoders().then((data) => setCoders(data));
-	}, []);
+		requestGetAllCoders().then((data) => dispatch({ type: 'SET_CODERS', payload: data }));
+	}, [ dispatch ]);
 
 	return (
 		<MainPageContainer>
@@ -82,6 +85,7 @@ export const MainPage = () => {
 				Здесь Вы можете познакомиться с участниками
 				<br /> Хакатона №2 курса "Junior Fronted-разработчик"
 			</p>
+			{ !coders.length && <h2>По вашему запросу ничего не найдено</h2>}
 			<SearchSort />
 			<div className="cards-container">
 				{coders.map((coder) => (
