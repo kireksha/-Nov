@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { XDropdown } from '../ui';
 import { Link } from 'react-router-dom';
 import { HeaderLink } from './components/HeaderLink';
+import { IconBack } from './components/icon-back';
 import { requestGetAllCoders } from '../../Pages/main-page/request-get-all-coders/request-get-all-coders';
 import { SelectCoders } from '../../selectors';
 import { useSelector, useDispatch } from 'react-redux';
@@ -23,6 +24,7 @@ const HeaderContainer = ({ className }) => {
 						<h2>Программисты:</h2>
 						{coders.map((coder) => <Link key={coder.id} to={`/coders/${coder.id}`}>{coder.name}<br/></Link> )}
 					</XDropdown>
+					<IconBack />
 					<HeaderLink linkAddress="/">ГЛАВНАЯ</HeaderLink>
 					<HeaderLink href="https://result.school/">САЙТ ШКОЛЫ</HeaderLink>
 					<HeaderLink linkAddress="/favorites">ИЗБРАННЫЕ УЧАСТНИКИ</HeaderLink>
