@@ -1,5 +1,7 @@
+import { useState } from 'react';
+import { XDropdown } from './components/ui'
 import { Route, Routes } from 'react-router-dom';
-import { Header, Footer } from './components';
+import { Header, Footer, Badge } from './components';
 import {MainPage, MainPageId } from './Pages';
 import styled from 'styled-components';
 
@@ -9,8 +11,15 @@ const Content = styled.div`
 `;
 
 export const AppContainer = ({ className }) => {
+  const [type, setType] = useState('bar');
+	const [value, setValue] = useState(33);
+	const [size, setSize] = useState(85);
+	const [thickness, setThickness] = useState(16);
 	return (
 		<div className={className}>
+			<XDropdown>
+				<p>dlkfhgdflkgjfdkgl</p>
+			</XDropdown>
 			<Header />
 			<Content>
 				<Routes>
@@ -27,6 +36,7 @@ export const AppContainer = ({ className }) => {
 				</Routes>
 			</Content>
 			<Footer />
+			<Badge />
 		</div>
 	);
 };
