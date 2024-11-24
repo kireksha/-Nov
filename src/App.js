@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Header, Footer } from './components';
 import {MainPage, MainPageId, FavoritePage } from './Pages';
@@ -10,10 +9,6 @@ const Content = styled.div`
 `;
 
 export const AppContainer = ({ className }) => {
-	const [type, setType] = useState('bar');
-	const [value, setValue] = useState(33);
-	const [size, setSize] = useState(85);
-	const [thickness, setThickness] = useState(16);
 	return (
 		<div className={className}>
 			<Header />
