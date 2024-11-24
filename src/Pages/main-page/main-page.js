@@ -1,7 +1,10 @@
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { requestGetAllCoders } from './request-get-all-coders/request-get-all-coders';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { SelectCoders } from '../../selectors';
+import { SearchSort } from './components';
 
 const MainPageContainer = styled.div`
 	width: 100%;
@@ -19,39 +22,47 @@ const MainPageContainer = styled.div`
 		height: 60%;
 		object-fit: cover;
 		border-radius: 50%;
-					box-shadow: 15px 10px 10px 5px rgba(0, 0, 0, 0.75);
+		box-shadow: 15px 10px 10px 5px rgba(0, 0, 0, 0.75);
 	}
-		p {
-			font-size: 25px;
-		}
-			a:hover {
-				box-shadow: 15px 10px 10px 10px rgba(0, 0, 0, 0.75);
-				border-radius: 15px;
-			}
-
+	p {
+		font-size: 25px;
+	}
+	a:hover {
+		box-shadow: 15px 10px 10px 10px rgba(0, 0, 0, 0.75);
+		border-radius: 15px;
+	}
 `;
 export const MainPage = () => {
-	const [coders, setCoders] = useState([]);
+	const coders = useSelector(SelectCoders);
+	const dispatch = useDispatch();
+
 	useEffect(() => {
-		requestGetAllCoders().then((data) => setCoders(data));
-	}, []);
-
+		requestGetAllCoders().then((data) =>
+			dispatch({ type: 'SET_CODERS', payload: data }),
+		);
+	}, [dispatch]);
 	return (
-		<MainPageContainer>
-							<h2>162 - ГРУППА  БУДУЩИХ ВЫПУСКНИКОВ RESULT UNIVERSITY!</h2>
-			<p>
-				Здесь Вы можете познакомиться с участниками
-				<br /> Хакатона №2 курса "Junior Fronted-разработчик"{' '}
-			</p>
-			<div>
-				{coders.map((coder) => (
-					<Link to={`/coders/${coder.id}`}>
-						<img src={coder.avatar} alt={coder.name} />
-						<p key={coder.id}>{coder.name}</p>
-					</Link>
-
-				))}
-			</div>
-		</MainPageContainer>
+		<>
+			<SearchSort />
+			<MainPageContainer>
+				<h2>162 - ГРУППА БУДУЩИХ ВЫПУСКНИКОВ RESULT UNIVERSITY!</h2>
+				<p>
+					Здесь Вы можете познакомиться с участниками
+					<br /> Хакатона №2 курса "Junior Fronted-разработчик"
+				</p>
+				{coders.length > 0 ? (
+					<div>
+						{coders.map((coder) => (
+							<Link to={`/coders/${coder.id}`} key={coder.id}>
+								<img src={coder.avatar} alt={coder.name} />
+								<p>{coder.name}</p>
+							</Link>
+						))}
+					</div>
+				) : (
+					<h2>По вашему запросу ничего не нашлось</h2>
+				)}
+			</MainPageContainer>
+		</>
 	);
 };

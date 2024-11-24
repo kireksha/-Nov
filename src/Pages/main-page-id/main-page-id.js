@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { useEffect } from 'react';
-import { requestGetCoder, requestGetSocials } from './requests';
+import { requestGetCoder, requestGetSocials , requestGetSkills} from './requests';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { SelectCoder, SelectClickMoreAboutMe, SelectSocials } from '../../selectors';
+import { SelectCoder, SelectClickMoreAboutMe, SelectSocials, SelectSearchCoderInput} from '../../selectors';
 import SocialsLogoVK from '../../pictures/socials/VK.svg';
 import SocialsLogoTG from '../../pictures/socials/Telegram.svg';
 import SocialsLogoInstagram from '../../pictures/socials/Instagram.svg';
+
 
 const MainPageIdContainer = styled.div`
 	width: 100vw;
@@ -24,25 +25,17 @@ const MainPageIdContainer = styled.div`
 		background-color: #d9d9d9;
 		border-radius: 30px;
 		cursor: pointer;
-		&:hover {
-			animation: shake 0.4s ease-in-out forwards;
+			&:hover {
+		animation: scale 0.2s ease-in-out forwards;
 		}
-		@keyframes shake {
+		@keyframes scale {
 			0% {
-				transform: translate(0, 0);
-			}
-			25% {
-				transform: translate(15px, 0);
-			}
-			50% {
-				transform: translate(0, 0);
-			}
-			75% {
-				transform: translate(-1px, 0);
+				transform: scale(1);
 			}
 			100% {
-				transform: translate(0, 0);
+				transform: scale(1.2);
 			}
+		}
 		}
 	}
 `;
@@ -55,8 +48,8 @@ const Header = styled.header`
 	padding: 50px;
 	justify-content: center;
 	img {
-		width: 600px;
-		height: 600px;
+		width: 500px;
+		height: 500px;
 		border-radius: 50%;
 		box-shadow: 15px 10px 10px 5px rgba(0, 0, 0, 0.75);
 	}
@@ -69,19 +62,20 @@ const SocialsContainer = styled.div`
 	align-items: center;
 	cursor: pointer;
 	img {
-		width: 70px;
-		height: 70px;
+		width: 60px;
+		height: 60px;
 		object-fit: cover;
-		margin-right: 40px;
 		box-shadow: none;
 	}
 	a:hover {
 		border-radius: 50%;
-		width: 50px;
-		height: 50px;
+		width: 60px;
+		height: 60px;
 		object-fit: cover;
 		margin-right: 40px;
-		animation: rotate 0.5s ease-in-out forwards;
+		&:hover {
+		animation: rotate 0.3s ease-in-out forwards;
+		}
 		@keyframes rotate {
 			0% {
 				transform: rotate(0deg);
@@ -111,14 +105,14 @@ const AboutMeContainer = styled.div`
 	line-height: 1.5;
 	padding: 10px;
 	border: 2px solid black;
-	margin: 30px;
+	margin: 25px;
 	h2 {
 		font-size: 30px;
 		margin: 0;
 	}
 `;
-const ProgressBarContainer = styled.div``;
-/*стили для контейнера progressBar*/
+
+
 export const MainPageId = () => {
 	const coder = useSelector(SelectCoder);
 	const clickMoreAboutMe = useSelector(SelectClickMoreAboutMe);
@@ -132,8 +126,11 @@ export const MainPageId = () => {
 		requestGetSocials(id).then((data) =>
 			dispatch({ type: 'SET_SOCIALS', payload: data }),
 		);
+		requestGetSkills(id).then((data) =>
+			dispatch({ type: 'SET_SKILLS', payload: data })
+		,
+		);
 	}, [id, dispatch]);
-
 	return (
 		<MainPageIdContainer>
 			<Header>
@@ -146,13 +143,13 @@ export const MainPageId = () => {
 					<p> Год рождения: {coder.birth}</p>
 					<SocialsContainer>
 						<a href={socials.vk}>
-							<img src={SocialsLogoVK} />
+							<img src={SocialsLogoVK} alt="vk" />
 						</a>
 						<a href={socials.tg}>
-							<img src={SocialsLogoTG} />
+							<img src={SocialsLogoTG} alt="telegram" />
 						</a>
 						<a href={socials.inst}>
-							<img src={SocialsLogoInstagram} />
+							<img src={SocialsLogoInstagram} alt="instagram" />
 						</a>
 					</SocialsContainer>
 				</Information>
@@ -170,15 +167,13 @@ export const MainPageId = () => {
 				</button>
 			}
 			{clickMoreAboutMe && (
-				<AboutMeContainer>
-					<h2>Обо мне:</h2>
-					<p>{coder.about}</p>
-				</AboutMeContainer>
+				<>
+					<AboutMeContainer>
+						<h2>Обо мне:</h2>
+						<p>{coder.about}</p>
+					</AboutMeContainer>
+				</>
 			)}
-			<ProgressBarContainer>
-				<p>Тут будет progress bar</p>
-				{/* место для того, кто делает progress bar*/}
-			</ProgressBarContainer>
 		</MainPageIdContainer>
 	);
 };
