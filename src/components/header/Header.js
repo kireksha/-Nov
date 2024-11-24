@@ -1,14 +1,28 @@
 import styled from 'styled-components';
 import { XDropdown } from '../ui';
+import { Link } from 'react-router-dom';
 import { HeaderLink } from './components/HeaderLink';
 import { IconBack } from './components/icon-back';
+import { requestGetAllCoders } from '../../Pages/main-page/request-get-all-coders/request-get-all-coders';
+import { SelectCoders } from '../../selectors';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 const HeaderContainer = ({ className }) => {
+	const coders = useSelector(SelectCoders);
+	const dispatch = useDispatch();
+	useEffect(() => {
+		requestGetAllCoders().then((data) => dispatch({ type: 'SET_CODERS', payload: data }));
+	})
 	return (
 		<header className={className}>
 			<nav className="header-nav">
 				<ul className="list-link">
 					<XDropdown className="list-link" style={{ marginRight: '40px' }}>
-						<p>dlkfhgdflkgjfdkgl</p>
+						<Link to="/">Главная</Link><br/>
+						<Link to="/favorites">Избранные</Link><br/>
+						<Link to="https://result.school/">Сайт школы</Link><br/>
+						<h2>Программисты:</h2>
+						{coders.map((coder) => <Link key={coder.id} to={`/coders/${coder.id}`}>{coder.name}<br/></Link> )}
 					</XDropdown>
 					<IconBack />
 					<HeaderLink linkAddress="/">ГЛАВНАЯ</HeaderLink>

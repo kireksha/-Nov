@@ -42,7 +42,7 @@ export function XDropdown({ children, className, style }) {
 					</g>
 				</svg>
 			</button>
-			<div className="x-dropdown__menu">{children}</div>
+			<div className="x-dropdown__menu">{ children }</div>
 		</div>
 	);
 }
