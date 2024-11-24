@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Hackathon-162-Nov/static/css/main.7e61cdb4.css",
+    "main.js": "/Hackathon-162-Nov/static/js/main.a6fbdb06.js",
+    "static/media/Inter-BlackItalic.woff": "/Hackathon-162-Nov/static/media/Inter-BlackItalic.c5ae584edda09ec2c70c.woff",
+    "static/media/Inter-Regular.woff": "/Hackathon-162-Nov/static/media/Inter-Regular.cb02dc0cf77f286fb845.woff",
+    "static/media/Inter-BlackItalic.woff2": "/Hackathon-162-Nov/static/media/Inter-BlackItalic.bb94c5836b3fd7d86c46.woff2",
+    "static/media/Inter-Regular.woff2": "/Hackathon-162-Nov/static/media/Inter-Regular.85c128721035823e5405.woff2",
+    "static/media/support.svg": "/Hackathon-162-Nov/static/media/support.31927565666a7acff28f40bd5c0aa354.svg",
+    "static/media/sheriff.svg": "/Hackathon-162-Nov/static/media/sheriff.b9378e8f9ea613e9584244bdcbe9f5d7.svg",
+    "static/media/Telegram.svg": "/Hackathon-162-Nov/static/media/Telegram.6352b687d0c306e9bc341a92f43c0eda.svg",
+    "static/media/VK.svg": "/Hackathon-162-Nov/static/media/VK.07f95814075caf6b320c2224118a09cc.svg",
+    "static/media/Instagram.svg": "/Hackathon-162-Nov/static/media/Instagram.a930fed5dd67cb4be5c4da12b5a51eb4.svg",
+    "static/media/YouTube.svg": "/Hackathon-162-Nov/static/media/YouTube.6099d209b0fa3a94bc82a2cdae215043.svg",
+    "static/media/back-arrow-svgrepo-com.svg": "/Hackathon-162-Nov/static/media/back-arrow-svgrepo-com.9398b7a57dad7eba9d09fbd344157e60.svg",
+    "index.html": "/Hackathon-162-Nov/index.html",
+    "main.7e61cdb4.css.map": "/Hackathon-162-Nov/static/css/main.7e61cdb4.css.map",
+    "main.a6fbdb06.js.map": "/Hackathon-162-Nov/static/js/main.a6fbdb06.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e61cdb4.css",
+    "static/js/main.a6fbdb06.js"
+  ]
+}
