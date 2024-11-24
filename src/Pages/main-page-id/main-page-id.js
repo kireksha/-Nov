@@ -126,7 +126,7 @@ const AboutMeContainer = styled.div`
 `;
 const ProgressBarContainer = styled.div`
 	display: flex;
-	justifycontent: space-around;
+	justify-content: space-around;
 	gap: 6px;
 `;
 const LabelSkill = styled.h3`
@@ -195,7 +195,7 @@ export const MainPageId = () => {
 				</AboutMeContainer>
 			)}
 
-			<XAccordionTab header="Мой прогресс">
+			<XAccordionTab header="Мой прогресс" style={{ width: '85%' }}>
 				<ProgressBarContainer>
 					<div>
 						<XProgress
