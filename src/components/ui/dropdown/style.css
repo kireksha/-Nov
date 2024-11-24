@@ -13,10 +13,11 @@
 .x-dropdown__btn {
 	background: transparent;
 	border: 0;
-	height: 30px;
-	width: 30px;
+	height: 60px;
+	width: 60px;
 }
 .x-dropdown--open .x-dropdown__menu {
 	display: block;
 	border: 1px solid #ccc;
+	background-color: #fff;
 }
