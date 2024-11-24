@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import './style.css';
-export function XDropdown({ children, label }) {
+export function XDropdown({ children, className, style }) {
 	const [open, setOpen] = useState(false);
 	useEffect(() => {
 		const closeMenu = () => {
@@ -19,9 +19,10 @@ export function XDropdown({ children, label }) {
 	};
 	return (
 		<div
-			className={classNames('x-dropdown', {
+			className={classNames('x-dropdown', className, {
 				'x-dropdown--open': open,
 			})}
+			style={style}
 		>
 			<button className="x-dropdown__btn" onClick={onClick}>
 				<svg
