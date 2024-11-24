@@ -1,11 +1,14 @@
-import { HeaderLink } from './components/HeaderLink';
 import styled from 'styled-components';
-
+import { XDropdown } from '../ui';
+import { HeaderLink } from './components/HeaderLink';
 const HeaderContainer = ({ className }) => {
 	return (
 		<header className={className}>
 			<nav className="header-nav">
 				<ul className="list-link">
+					<XDropdown className="list-link" style={{ marginRight: '40px' }}>
+						<p>dlkfhgdflkgjfdkgl</p>
+					</XDropdown>
 					<HeaderLink linkAddress="/">ГЛАВНАЯ</HeaderLink>
 					<HeaderLink href="https://result.school/">САЙТ ШКОЛЫ</HeaderLink>
 					<HeaderLink linkAddress="/favorites">ИЗБРАННЫЕ УЧАСТНИКИ</HeaderLink>
