@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 
-// в пропсы кидается объект юзера при мэпе
 const FavoriteContainer = ({ className, user }) => {
 	const [isFavorite, setIsFavorite] = useState(false);
 
@@ -10,7 +9,8 @@ const FavoriteContainer = ({ className, user }) => {
 		setIsFavorite(favoritesArr.includes(user.id));
 	}, [user.id]);
 
-	const handlerChangeFavorite = () => {
+	const handlerChangeFavorite = (event) => {
+		event.preventDefault();
 		let favoritesArr = JSON.parse(localStorage.getItem('favs') || '[]');
 
 		if (isFavorite) {

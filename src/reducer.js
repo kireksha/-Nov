@@ -1,8 +1,10 @@
 const initialState = {
+	coders: [],
 	coder: [],
 	socials: [],
-	skills: {},
+	skills: [],
 	clickMoreAboutMe: false,
+	searchCoderInput: ''
 };
 export const reducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -22,6 +24,16 @@ export const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				skills: action.payload,
+			};
+			case 'SET_SEARCH_CODER_INPUT':
+			return {
+				...state,
+				searchCoderInput: action.payload
+			};
+			case 'SET_CODERS':
+			return {
+				...state,
+				coders: action.payload
 			};
 		default:
 			return state;

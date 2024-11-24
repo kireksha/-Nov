@@ -29,7 +29,7 @@ export function XDropdown({ children, className, style }) {
 				<span></span>
 				<span></span>
 			</button>
-			<div className="x-dropdown__menu">{children}</div>
+			<div className="x-dropdown__menu">{ children }</div>
 		</div>
 	);
 }
