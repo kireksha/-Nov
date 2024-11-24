@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import './style.css';
 export function XDropdown({ children, className, style }) {
@@ -29,7 +30,13 @@ export function XDropdown({ children, className, style }) {
 				<span></span>
 				<span></span>
 			</button>
-			<div className="x-dropdown__menu">{ children }</div>
+			<div className="x-dropdown__menu">{children}</div>
 		</div>
 	);
 }
+
+XDropdown.propTypes = {
+	children: PropTypes.node,
+	className: PropTypes.string,
+	style: PropTypes.object,
+};
