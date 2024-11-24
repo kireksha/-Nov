@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { XDropdown } from '../ui';
 import { HeaderLink } from './components/HeaderLink';
+import { IconBack } from './components/icon-back';
 const HeaderContainer = ({ className }) => {
 	return (
 		<header className={className}>
@@ -9,6 +10,7 @@ const HeaderContainer = ({ className }) => {
 					<XDropdown className="list-link" style={{ marginRight: '40px' }}>
 						<p>dlkfhgdflkgjfdkgl</p>
 					</XDropdown>
+					<IconBack />
 					<HeaderLink linkAddress="/">ГЛАВНАЯ</HeaderLink>
 					<HeaderLink href="https://result.school/">САЙТ ШКОЛЫ</HeaderLink>
 					<HeaderLink linkAddress="/favorites">ИЗБРАННЫЕ УЧАСТНИКИ</HeaderLink>

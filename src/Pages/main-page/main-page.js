@@ -1,8 +1,9 @@
-import styled from 'styled-components';
-import { useEffect, useState } from 'react';
 import { requestGetAllCoders } from './request-get-all-coders/request-get-all-coders';
+import { Favorite } from './components/favorite-button/Favorite';
+import { Badge } from '../../components';
 import { Link } from 'react-router-dom';
-import { Favorite } from '../../svetoslav/Favorite/Favorite';
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 const MainPageContainer = styled.div`
 	width: 100%;
@@ -10,7 +11,7 @@ const MainPageContainer = styled.div`
 	margin: 50px 0;
 	text-align: center;
 
-	div {
+	.cards-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
@@ -21,28 +22,37 @@ const MainPageContainer = styled.div`
 		width: 180px;
 		height: 180px;
 		object-fit: cover;
-		border-radius: 50%; /* Круглая форма */
+		border-radius: 50%;
 		box-shadow: 15px 10px 10px 5px rgba(0, 0, 0, 0.75);
 	}
 
 	p {
 		font-size: 25px;
-		margin: 10px 0; /* Отступы для текста */
+		margin: 10px 0;
 	}
 
-	a:hover {
+	.cards-container_card {
+		position: relative;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.cards-container_card:hover {
 		box-shadow: 15px 10px 10px 10px rgba(0, 0, 0, 0.75);
 		border-radius: 15px;
 	}
 
-	.item_wtrapper {
+	.item_wrapper {
 		display: flex;
 		flex-direction: column;
-		justify-content: center; /* Центрирование по вертикали */
-		align-items: center; /* Центрирование по горизонтали */
+		justify-content: center;
+		align-items: center;
 		text-align: center;
 		height: 360px;
 		padding: 10px;
+	}
+
+	.avatar {
+		margin-bottom: 30px;
 	}
 
 	.item_info {
@@ -50,12 +60,12 @@ const MainPageContainer = styled.div`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		// text-align: center;
-		// width: 100%;
 	}
-	.favorite_box {
-		text-align: center;
-		// border: 1px solid #ccc;
+
+	.badge {
+		position: absolute;
+		right: 20px;
+		top: 10%;
 	}
 `;
 
@@ -67,22 +77,29 @@ export const MainPage = () => {
 
 	return (
 		<MainPageContainer>
-							<h2>162 - ГРУППА  БУДУЩИХ ВЫПУСКНИКОВ RESULT UNIVERSITY!</h2>
+			<h2>162 - ГРУППА БУДУЩИХ ВЫПУСКНИКОВ RESULT UNIVERSITY!</h2>
 			<p>
 				Здесь Вы можете познакомиться с участниками
-				<br /> Хакатона №2 курса "Junior Fronted-разработчик"{' '}
+				<br /> Хакатона №2 курса "Junior Fronted-разработчик"
 			</p>
-			<div>
+			<div className="cards-container">
 				{coders.map((coder) => (
-					<Link key={coder.id} to={`/coders/${coder.id}`}>
-						<div className="item_wtrapper">
-							<img src={coder.avatar} alt={coder.name} />
-							<div className="item_info">
-								<p>{coder.name}</p>
-								<Favorite className="favorite_box" user={coder} />
+					<div key={coder.id} className="cards-container_card">
+						<Badge className="badge" coderId={coder.id} />
+						<Link to={`/coders/${coder.id}`}>
+							<div className="item_wrapper">
+								<img
+									className="avatar"
+									src={coder.avatar}
+									alt={coder.name}
+								/>
+								<div className="item_info">
+									<p>{coder.name}</p>
+									<Favorite user={coder} />
+								</div>
 							</div>
-						</div>
-					</Link>
+						</Link>
+					</div>
 				))}
 			</div>
 		</MainPageContainer>

@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Header, Footer, Badge } from './components';
+import { Header, Footer } from './components';
 import {MainPage, MainPageId, FavoritePage } from './Pages';
 import styled from 'styled-components';
-import { Badge, Footer, Header } from './components';
-import { MainPage } from './Pages';
 
 const Content = styled.div`
 	margin: 0 auto;
@@ -34,7 +32,6 @@ export const AppContainer = ({ className }) => {
 				</Routes>
 			</Content>
 			<Footer />
-			<Badge />
 		</div>
 	);
 };
