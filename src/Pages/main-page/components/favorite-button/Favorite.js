@@ -25,7 +25,6 @@ const FavoriteContainer = ({ className, user }) => {
 
 	return (
 		<div className={`${className} ${isFavorite ? 'favorite' : ''}`} onClick={handlerChangeFavorite}>
-			<span></span>
 			{isFavorite ? '♥' : '♡'}
 		</div>
 	);
@@ -34,13 +33,8 @@ const FavoriteContainer = ({ className, user }) => {
 export const Favorite = styled(FavoriteContainer)`
 	color: grey;
 	cursor: pointer;
-	text-align: center;
-
+	font-size: 50px;
 	&.favorite {
 		color: red;
-	}
-
-	span {
-		font-size: 26px;
 	}
 `;
