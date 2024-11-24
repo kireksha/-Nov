@@ -20,14 +20,8 @@ export const AppContainer = ({ className }) => {
 			<Content>
 				<Routes>
 					<Route path="/" element={<MainPage />} />
-					<Route
-						path="/coders/:id"
-						element={<MainPageId />}
-					/>
-					<Route
-						path="/favorites"
-						element={<FavoritePage />}
-					/>
+					<Route path="/coders/:id" element={<MainPageId />} />
+					<Route path="/favorites" element={<FavoritePage />} />
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
 			</Content>

@@ -15,21 +15,26 @@ export const reducer = (state = initialState, action) => {
 			};
 		case 'SET_CLICK_MORE_ABOUT_ME':
 			return { ...state, clickMoreAboutMe: action.payload };
-			case 'SET_SOCIALS':
+		case 'SET_SOCIALS':
 			return {
 				...state,
 				socials: action.payload,
-			}
+			};
+		case 'SET_SKILLS':
+			return {
+				...state,
+				skills: action.payload,
+			};
 			case 'SET_SEARCH_CODER_INPUT':
 			return {
 				...state,
 				searchCoderInput: action.payload
-			}
+			};
 			case 'SET_CODERS':
 			return {
 				...state,
 				coders: action.payload
-			}
+			};
 		default:
 			return state;
 	}

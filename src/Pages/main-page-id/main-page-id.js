@@ -1,12 +1,18 @@
-import styled from 'styled-components';
 import { useEffect } from 'react';
-import { requestGetCoder, requestGetSocials , requestGetSkills} from './requests';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { SelectCoder, SelectClickMoreAboutMe, SelectSocials} from '../../selectors';
+import styled from 'styled-components';
+import { XAccordionTab, XProgress } from '../../components/ui';
+import { requestGetCoder, requestGetSocials , requestGetSkills} from './requests';
 import SocialsLogoVK from '../../pictures/socials/VK.svg';
 import SocialsLogoTG from '../../pictures/socials/Telegram.svg';
 import SocialsLogoInstagram from '../../pictures/socials/Instagram.svg';
+import {
+	SelectClickMoreAboutMe,
+	SelectCoder,
+	SelectSkills,
+	SelectSocials,
+} from '../../selectors';
 
 
 const MainPageIdContainer = styled.div`
@@ -17,6 +23,7 @@ const MainPageIdContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
+	padding-bottom: 24px;
 	button {
 		width: 200px;
 		height: 50px;
@@ -111,12 +118,21 @@ const AboutMeContainer = styled.div`
 		margin: 0;
 	}
 `;
-
-
+const ProgressBarContainer = styled.div`
+	display: flex;
+	justify-content: space-around;
+	gap: 6px;
+`;
+const LabelSkill = styled.h3`
+	margin: 6px 0 0;
+	text-align: center;
+`;
+/*стили для контейнера progressBar*/
 export const MainPageId = () => {
 	const coder = useSelector(SelectCoder);
 	const clickMoreAboutMe = useSelector(SelectClickMoreAboutMe);
 	const socials = useSelector(SelectSocials);
+	const skills = useSelector(SelectSkills);
 	const dispatch = useDispatch();
 	const { id } = useParams();
 	useEffect(() => {
@@ -127,8 +143,7 @@ export const MainPageId = () => {
 			dispatch({ type: 'SET_SOCIALS', payload: data }),
 		);
 		requestGetSkills(id).then((data) =>
-			dispatch({ type: 'SET_SKILLS', payload: data })
-		,
+			dispatch({ type: 'SET_SKILLS', payload: data }),
 		);
 	}, [id, dispatch]);
 	return (
@@ -174,6 +189,55 @@ export const MainPageId = () => {
 					</AboutMeContainer>
 				</>
 			)}
+
+			<XAccordionTab header="Мой прогресс" style={{ width: '85%' }}>
+				<ProgressBarContainer>
+					<div>
+						<XProgress
+							type="circle"
+							value={skills.html}
+							size={128}
+							thickness={10}
+							color="negative"
+							label
+						/>
+						<LabelSkill>HTML</LabelSkill>
+					</div>
+					<div>
+						<XProgress
+							type="circle"
+							value={skills.css}
+							size={128}
+							thickness={10}
+							color="secondary"
+							label
+						/>
+						<LabelSkill>CSS</LabelSkill>
+					</div>
+					<div>
+						<XProgress
+							type="circle"
+							value={skills.javascript}
+							size={128}
+							thickness={10}
+							color="warning"
+							label
+						/>
+						<LabelSkill>JavaScript</LabelSkill>
+					</div>
+					<div>
+						<XProgress
+							type="circle"
+							value={skills.react}
+							size={128}
+							thickness={10}
+							color="info"
+							label
+						/>
+						<LabelSkill>React</LabelSkill>
+					</div>
+				</ProgressBarContainer>
+			</XAccordionTab>
 		</MainPageIdContainer>
 	);
 };
