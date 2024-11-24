@@ -1,1 +1,2 @@
-export * from "./search-sort-components.ks/search-sort-component";
+export * from "./search-sort-components/search-sort-component";
+export * from "./favorite-button/Favorite";

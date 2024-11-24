@@ -1,5 +1,5 @@
 import { requestGetAllCoders } from './request-get-all-coders/request-get-all-coders';
-import { Favorite } from './components/favorite-button/Favorite';
+import { Favorite, SearchSort, SimpleCarousel } from './components';
 import { Badge } from '../../components';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -82,6 +82,7 @@ export const MainPage = () => {
 				Здесь Вы можете познакомиться с участниками
 				<br /> Хакатона №2 курса "Junior Fronted-разработчик"
 			</p>
+			<SearchSort />
 			<div className="cards-container">
 				{coders.map((coder) => (
 					<div key={coder.id} className="cards-container_card">
