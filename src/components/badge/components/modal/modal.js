@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const ModalContentContainer = ({ className, closeModal, role }) => {
@@ -17,3 +18,8 @@ export const ModalContent = styled(ModalContentContainer)`
 		cursor: pointer;
 	}
 `;
+ModalContentContainer.propTypes = {
+	className: PropTypes.string,
+	closeModal: PropTypes.func,
+	role: PropTypes.object,
+};

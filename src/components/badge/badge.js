@@ -1,11 +1,12 @@
-import styled from 'styled-components';
-import { ReactComponent as Sheriff } from '../../pictures/icons/sheriff.svg';
-import { ReactComponent as Support } from '../../pictures/icons/support.svg';
-import { ROLE } from './role';
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import ReactModal from 'react-modal';
+import styled from 'styled-components';
 import { getRole } from '../../bff/api';
+import { ReactComponent as Sheriff } from '../../pictures/icons/sheriff.svg';
+import { ReactComponent as Support } from '../../pictures/icons/support.svg';
 import { ModalContent } from './components/modal/modal';
+import { ROLE } from './role';
 
 const BadgeContainer = ({ className, coderId }) => {
 	const [role, setRole] = useState({});
@@ -45,7 +46,10 @@ const BadgeContainer = ({ className, coderId }) => {
 		</div>
 	);
 };
-
+BadgeContainer.propTypes = {
+	className: PropTypes.string,
+	coderId: PropTypes.any,
+};
 export const Badge = styled(BadgeContainer)`
 	display: flex;
 	justify-content: center;

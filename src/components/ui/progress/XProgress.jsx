@@ -120,7 +120,7 @@ export function XProgressRoot({
 						r={radius}
 						strokeWidth={strokeWidth}
 						strokeDasharray={circumference}
-						strokeDashoffset={strokeDashOffset}
+						strokeDashoffset={'' + strokeDashOffset}
 					/>
 				</svg>
 				{children && <div className="x-progress-circular__label">{children}</div>}
@@ -140,10 +140,10 @@ XProgressRoot.propTypes = {
 	children: PropTypes.node,
 	className: PropTypes.string,
 	type: PropTypes.oneOf(['bar', 'circle']),
-	value: PropTypes.number,
-	buffer: PropTypes.number,
-	size: PropTypes.number,
-	thickness: PropTypes.number,
+	value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+	buffer: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+	size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+	thickness: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	color: PropTypes.oneOf([
 		'primary',
 		'secondary',

@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import { useRef, useState } from 'react';
 import './style.css';
 export function XAccordionTab({ className, children, header, ...props }) {
@@ -32,3 +33,9 @@ export function XAccordionTab({ className, children, header, ...props }) {
 		</div>
 	);
 }
+
+XAccordionTab.propTypes = {
+	children: PropTypes.node,
+	className: PropTypes.string,
+	header: PropTypes.string,
+};
