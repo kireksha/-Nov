@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const HeaderLinkContainer = ({ className, children, linkAddress='', href='' }) => {
+const HeaderLinkContainer = ({ className, children, linkAddress = '', href = '' }) => {
 	return (
 		<li className={className}>
 			{linkAddress !== '' ? (
@@ -14,6 +15,12 @@ const HeaderLinkContainer = ({ className, children, linkAddress='', href='' }) =
 		</li>
 	);
 };
+HeaderLinkContainer.propTypes = {
+	children: PropTypes.node,
+	className: PropTypes.string,
+	linkAddress: PropTypes.string,
+	href: PropTypes.string,
+};
 
 export const HeaderLink = styled(HeaderLinkContainer)`
 	position: relative;
@@ -25,7 +32,9 @@ export const HeaderLink = styled(HeaderLinkContainer)`
 	background-color: #d9d9d9;
 	border-radius: 30px;
 	cursor: pointer;
-	transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+	transition:
+		opacity 0.2s ease-in-out,
+		transform 0.2s ease-in-out;
 
 	& a {
 		position: absolute;
@@ -39,7 +48,7 @@ export const HeaderLink = styled(HeaderLinkContainer)`
 	}
 
 	&:hover {
-		opacity: .8;
+		opacity: 0.8;
 	}
 
 	&:active {
