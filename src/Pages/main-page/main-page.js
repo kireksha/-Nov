@@ -38,6 +38,7 @@ export const MainPage = () => {
 
 	return (
 		<MainPageContainer>
+							<h2>162 - ГРУППА  БУДУЩИХ ВЫПУСКНИКОВ RESULT UNIVERSITY!</h2>
 			<p>
 				Здесь Вы можете познакомиться с участниками
 				<br /> Хакатона №2 курса "Junior Fronted-разработчик"{' '}

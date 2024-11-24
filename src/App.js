@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { XDropdown } from './components/ui'
 import { Route, Routes } from 'react-router-dom';
 import { Header, Footer, Badge } from './components';
-import {MainPage } from './Pages';
+import {MainPage, MainPageId } from './Pages';
 import styled from 'styled-components';
 
 const Content = styled.div`
@@ -22,12 +22,11 @@ export const AppContainer = ({ className }) => {
 			</XDropdown>
 			<Header />
 			<Content>
-				<h2>162 ГРУППА БУДУЩИХ ВЫПУСКНИКОВ RESULT UNIVERSITY</h2>
 				<Routes>
 					<Route path="/" element={<MainPage/>} />
 					<Route
 						path="/coders/:id"
-						element={<div>Открытая страница программиста по id</div>}
+						element={<MainPageId />}
 					/>
 					<Route
 						path="/favorites"
