@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { requestGetCoder, requestGetSocials , requestGetSkills} from './requests';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { SelectCoder, SelectClickMoreAboutMe, SelectSocials, SelectSearchCoderInput} from '../../selectors';
+import { SelectCoder, SelectClickMoreAboutMe, SelectSocials} from '../../selectors';
 import SocialsLogoVK from '../../pictures/socials/VK.svg';
 import SocialsLogoTG from '../../pictures/socials/Telegram.svg';
 import SocialsLogoInstagram from '../../pictures/socials/Instagram.svg';

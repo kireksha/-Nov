@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Header, Footer } from './components';
-import {MainPage, MainPageId } from './Pages';
+import { Header, Footer, Badge } from './components';
+import {MainPage, MainPageId, FavoritePage } from './Pages';
 import styled from 'styled-components';
+
 
 const Content = styled.div`
 	margin: 0 auto;
@@ -9,24 +11,29 @@ const Content = styled.div`
 `;
 
 export const AppContainer = ({ className }) => {
+	const [type, setType] = useState('bar');
+	const [value, setValue] = useState(33);
+	const [size, setSize] = useState(85);
+	const [thickness, setThickness] = useState(16);
 	return (
 		<div className={className}>
 			<Header />
 			<Content>
 				<Routes>
-					<Route path="/" element={<MainPage/>} />
+					<Route path="/" element={<MainPage />} />
 					<Route
 						path="/coders/:id"
 						element={<MainPageId />}
 					/>
 					<Route
 						path="/favorites"
-						element={<div>Избранные участники по id</div>}
+						element={<FavoritePage />}
 					/>
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
 			</Content>
 			<Footer />
+			<Badge />
 		</div>
 	);
 };
