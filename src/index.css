@@ -1,0 +1,83 @@
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src:
+		local('Inter'),
+		url('../fonts/Inter-Regular.woff2') format('woff2'),
+		url('../fonts/Inter-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-weight: 900;
+	font-display: swap;
+	src:
+		local('Inter'),
+		url('../fonts/Inter-BlackItalic.woff2') format('woff2'),
+		url('../fonts/Inter-BlackItalic.woff') format('woff');
+}
+:root {
+	--color-primary: #1976d2;
+	--color-secondary: #5cbbf6;
+	--color-accent: #9c27b0;
+	--color-positive: #4caf50;
+	--color-negative: #dc3545;
+	--color-info: #2196f3;
+	--color-warning: #fb8c00;
+}
+.bg-primary {
+	background-color: var(--color-primary) !important;
+}
+.bg-secondary {
+	background-color: var(--color-secondary) !important;
+}
+.bg-accent {
+	background-color: var(--color-accent) !important;
+}
+.bg-positive {
+	background-color: var(--color-positive) !important;
+}
+.bg-negative {
+	background-color: var(--color-negative) !important;
+}
+.bg-info {
+	background-color: var(--color-info) !important;
+}
+.bg-warning {
+	background-color: var(--color-warning) !important;
+}
+.text-primary {
+	color: var(--color-primary) !important;
+}
+.text-secondary {
+	color: var(--color-secondary) !important;
+}
+.text-accent {
+	color: var(--color-accent) !important;
+}
+.text-positive {
+	color: var(--color-positive) !important;
+}
+.text-negative {
+	color: var(--color-negative) !important;
+}
+.text-info {
+	color: var(--color-info) !important;
+}
+.text-warning {
+	color: var(--color-warning) !important;
+}
+body {
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 24px;
+}
+
+a,
+button {
+	transition: all 0.2s ease-in-out;
+}

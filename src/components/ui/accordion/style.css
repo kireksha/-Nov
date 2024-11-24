@@ -1,0 +1,33 @@
+.x-accordion-tab {
+}
+.x-accordion-header {
+	cursor: pointer;
+	padding: 8px;
+	display: flex;
+	align-items: center;
+}
+.x-accordion-header-icon {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 8px solid;
+	border-top: 8px solid transparent !important;
+	border-bottom: 8px solid transparent !important;
+	border-right: 0 none transparent;
+	margin-right: 8px;
+	transition: transform ease-in-out 0.2s;
+}
+.x-accordion-content {
+	transition: height ease-in-out 0.2s;
+	overflow: hidden;
+}
+
+.x-accordion-tab--expanded {
+	.x-accordion-header-icon {
+		transform: rotate(90deg);
+	}
+	.x-accordion-content {
+		border-top: 1px solid currentColor;
+		padding: 8px;
+	}
+}

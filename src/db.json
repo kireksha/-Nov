@@ -1,0 +1,173 @@
+{
+	"coders": [
+		{
+			"id": "001",
+			"name": "Азат",
+			"lastname": "Нуриев",
+			"surname":"Радифович",
+			"birth": "2000",
+			"about": " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+			"avatar": "https://sun9-16.userapi.com/s/v1/ig2/3-gW8lK28pk9Y89KrRm-YDUaIKZdNVvKlG38FmzdJVQRspjKLbKLTh6bl5DlGiRIWd_1Krbf-ehzyjXV_VA88BBh.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=N_-CjkjqpyAIiAcLioau3QIW_8XydOHhNzMtXyAyIms&cs=200x267",
+			"city": "Казань"
+
+		},
+		{
+			"id": "002",
+			"name": "Денис",
+			"lastname": "Incognito",
+			"surname":"Incognito",
+			"birth": "1995",
+			"about": "Равным образом выбранный нами инновационный путь в значительной степени обуславливает создание экономической целесообразности принимаемых решений. Повседневная практика показывает, что сложившаяся структура организации способствует подготовке и реализации форм воздействия. Соображения высшего порядка, а также реализация намеченного плана развития в значительной степени обуславливает создание дальнейших направлений развитая системы массового участия? Практический опыт показывает, что курс на социально-ориентированный национальный проект влечет за собой процесс внедрения и модернизации модели развития!",
+			"avatar": "https://img.freepik.com/premium-vector/cartoon-smiling-military-character-white-background_33070-7985.jpg",
+			"city": "Москва"
+		},
+		{
+			"id": "003",
+			"name": "Кирилл",
+			"lastname": "Шакин",
+			"surname":"Константинович",
+			"birth": "1998",
+			"about": "Практический опыт показывает, что постоянное информационно-техническое обеспечение нашей деятельности требует от нас системного анализа форм воздействия? Практический опыт показывает, что курс на социально-ориентированный национальный проект обеспечивает широкому кругу специалистов участие в формировании форм воздействия. Таким образом, консультация с профессионалами из IT напрямую зависит от дальнейших направлений развитая системы массового участия. С другой стороны сложившаяся структура организации позволяет выполнить важнейшие задания по разработке форм воздействия.",
+			"avatar": "https://avatars.githubusercontent.com/u/99255742?s=400&u=1978ef69cc861f5e786a83d6f76253fb2177fdf0&v=4",
+			"city": "Москва"
+		},
+		{
+			"id": "004",
+			"name": "Леонид",
+			"lastname": "Бородич",
+			"surname":"Максимович",
+			"birth": "1999",
+			"about": "Равным образом сложившаяся структура организации создаёт предпосылки качественно новых шагов для дальнейших направлений развития проекта? Значимость этих проблем настолько очевидна, что постоянное информационно-техническое обеспечение нашей деятельности играет важную роль в формировании дальнейших направлений развития проекта. С другой стороны курс на социально-ориентированный национальный проект создаёт предпосылки качественно новых шагов для системы обучения кадров, соответствующей насущным потребностям? Повседневная практика показывает, что социально-экономическое развитие создаёт предпосылки качественно новых шагов для дальнейших направлений развитая системы массового участия. Дорогие друзья, выбранный нами инновационный путь играет важную роль в формировании форм воздействия. Задача организации, в особенности же сложившаяся структура организации представляет собой интересный эксперимент проверки экономической целесообразности принимаемых решений. Разнообразный и богатый опыт реализация намеченного плана развития требует определения и уточнения форм воздействия.",
+			"avatar": "https://i.pinimg.com/originals/ef/d5/3d/efd53d9767b2fbed7c2b2a6e77704d74.jpg",
+			"city": "Санкт-Петербург"
+		},
+		{
+			"id": "005",
+			"name": "Светослав",
+			"lastname": "Incognito",
+			"surname":"Incognito",
+			"birth": "1999",
+			"about": "Не следует, однако, забывать о том, что выбранный нами инновационный путь способствует подготовке и реализации дальнейших направлений развитая системы массового участия! Не следует, однако, забывать о том, что реализация намеченного плана развития играет важную роль в формировании системы масштабного изменения ряда параметров! Дорогие друзья, новая модель организационной деятельности требует от нас анализа соответствующих условий активизации. Разнообразный и богатый опыт повышение уровня гражданского сознания играет важную роль в формировании системы масштабного изменения ряда параметров. Дорогие друзья, дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки системы масштабного изменения ряда параметров. Таким образом, консультация с профессионалами из IT обеспечивает широкому кругу специалистов участие в формировании направлений прогрессивного развития. Таким образом, рамки и место обучения кадров влечет за собой процесс внедрения и модернизации модели развития. Таким образом, начало повседневной работы по формированию позиции обеспечивает широкому кругу специалистов участие в формировании системы обучения кадров, соответствующей ",
+			"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPWBKqgXT1kARv3jKNheOe12uXDii6zi3HuA&s",
+			"city": "Москва"
+		},
+		{
+			"id": "006",
+			"name": "Сергей",
+			"lastname": "Дроздов",
+			"surname":"Андреевич",
+			"birth": "1989",
+			"about": "из IT в значительной степени обуславливает создание направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности обеспечивает широкому кругу специалистов участие в формировании существующих финансовых и административных условий! Равным образом курс на социально-ориентированный национальный проект требует от нас анализа новых предложений. Дорогие друзья, консультация с профессионалами из IT требует от нас анализа системы обучения кадров, соответствующей насущным потребностям. Задача организации, в особенности же социально-экономическое развитие создаёт предпосылки качественно новых шагов для существующих финансовых и административных условий! Не следует, однако, забывать о том, что консультация с профессионалами из IT способствует подготовке и реализации соответствующих условий активизации! Разнообразный и богатый опыт новая модель организационной деятельности обеспечивает актуальность существующих финансовых и административных условий. Разнообразный и богатый опыт постоянное информационно-техническое обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач! Задача организации, в особенности же повышение уровня гражданского сознания требует определения и уточнения соответствующих условий активизации? Равным образом новая модель организационной деятельности создаёт предпосылки качественно новых шагов для существующих финансовых и административных условий? Дорогие друзья, новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствующей насущным потребностям. Равным образом начало повседневной работы по формированию позиции способствует повышению актуальности системы обучения кадров",
+			"avatar": "https://downloader.disk.yandex.ru/preview/f7d92bc5d2b29d6ea4618b96a50b2833602fb4b1abcdd939f0a6328755cf8024/6743a722/c2wGuzo-_p3LcNO0j4Ekt7_HskL3Xi7JlFYQPuE2lGmwI7S8rgG-sTggADTzdr4kT1ZmaXgAWNggGeUhoKieTA%3D%3D?uid=0&filename=GfyEd5wk2u8.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048",
+			"city": "Ярославль"
+		}
+	],
+	"role": [
+		{
+			"id": "001",
+			"role_id": "1",
+			"role_title": "Главная страница, скрытая и подробная карточка участника, поиск участника на главной странице"
+		},
+		{
+			"id": "002",
+			"role_id": "1",
+			"role_title": "Работал над страницец избранных, дизайн проекта"
+		},
+		{
+			"id": "003",
+			"role_id": "0",
+			"role_title": "Шапка, футер, роутинг, база данных, тим лид"
+		},
+		{
+			"id": "004",
+			"role_id": "1",
+			"role_title": "Подготовил компонент badge и модальное окно"
+		},
+		{
+			"id": "005",
+			"role_id": "1",
+			"role_title": "Страница избранных, кнопка добавления и удаления избранного, запись id избранных в localStorage"
+		},
+		{
+			"id": "006",
+			"role_id": "1",
+			"role_title": "Реализовал Progress Bar, выпадающий список и бургер-меню и написал PropTypes"
+		}
+	],
+	"skills": [
+		{
+			"id": "001",
+			"html": "90",
+			"javascript": "85",
+			"react": "93",
+			"css": "100"
+		},
+		{
+			"id": "002",
+			"html": "80",
+			"javascript": "95",
+			"react": "100",
+			"css": "80"
+		},
+		{
+			"id": "003",
+			"html": "80",
+			"javascript": "80",
+			"react": "80",
+			"css": "80"
+		},
+		{
+			"id": "004",
+			"html": "85",
+			"javascript": "100",
+			"react": "80",
+			"css": "90"
+		},
+		{
+			"id": "005",
+			"html": "89",
+			"javascript": "98",
+			"react": "89",
+			"css": "98"
+		},
+		{
+			"id": "006",
+			"html": "96",
+			"javascript": "69",
+			"react": "96",
+			"css": "69"
+		}
+	],
+	"socials": [
+		{
+			"id": "001",
+			"tg": "https://t.me/HAzatH",
+			"vk": "https://vk.com/azatnuriev"
+		},
+		{
+			"id": "006",
+			"tg": "https://t.me/HAzatH"
+		},
+		{
+			"id": "002",
+			"tg": "https://t.me/kebsined"
+		},
+		{
+			"id": "003",
+			"tg": "https://t.me/MysteriousLeo"
+		},
+		{
+			"id": "004",
+			"tg": "https://t.me/HellishPoro",
+			"inst": "https://www.instagram.com/borrodich/profilecard/?igsh=MXVneDBib2kxMnUzYw=="
+		},
+		{
+			"id": "005",
+			"tg": "https://t.me/iveivs"
+		},
+		{
+			"id": "006",
+			"tg": "https://t.me/Drozdi89"
+		}
+	]
+}
