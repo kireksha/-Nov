@@ -12,7 +12,7 @@ const HeaderContainer = ({ className }) => {
 	const dispatch = useDispatch();
 	useEffect(() => {
 		requestGetAllCoders().then((data) => dispatch({ type: 'SET_CODERS', payload: data }));
-	})
+	},[dispatch]);
 	return (
 		<header className={className}>
 			<nav className="header-nav">
