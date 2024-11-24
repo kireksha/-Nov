@@ -1,19 +1,19 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import styled from 'styled-components';
+import { useDispatch, useSelector } from 'react-redux';
 import { XAccordionTab, XProgress } from '../../components/ui';
-import { requestGetCoder, requestGetSocials , requestGetSkills} from './requests';
+import { requestGetCoder, requestGetSocials, requestGetSkills } from './requests';
 import SocialsLogoVK from '../../pictures/socials/VK.svg';
 import SocialsLogoTG from '../../pictures/socials/Telegram.svg';
 import SocialsLogoInstagram from '../../pictures/socials/Instagram.svg';
+import { Badge } from '../../components';
 import {
 	SelectClickMoreAboutMe,
 	SelectCoder,
 	SelectSkills,
 	SelectSocials,
 } from '../../selectors';
-
+import styled from 'styled-components';
 
 const MainPageIdContainer = styled.div`
 	width: 100vw;
@@ -24,7 +24,7 @@ const MainPageIdContainer = styled.div`
 	align-items: center;
 	min-height: 100vh;
 	padding-bottom: 24px;
-	button {
+	button:not(:first-child) {
 		width: 200px;
 		height: 50px;
 		font-size: 18px;
@@ -81,7 +81,7 @@ const SocialsContainer = styled.div`
 		object-fit: cover;
 		margin-right: 40px;
 		&:hover {
-		animation: rotate 0.3s ease-in-out forwards;
+			animation: rotate 0.3s ease-in-out forwards;
 		}
 		@keyframes rotate {
 			0% {
@@ -127,7 +127,7 @@ const LabelSkill = styled.h3`
 	margin: 6px 0 0;
 	text-align: center;
 `;
-/*стили для контейнера progressBar*/
+
 export const MainPageId = () => {
 	const coder = useSelector(SelectCoder);
 	const clickMoreAboutMe = useSelector(SelectClickMoreAboutMe);
@@ -149,6 +149,7 @@ export const MainPageId = () => {
 	return (
 		<MainPageIdContainer>
 			<Header>
+				<Badge coderId={id} />
 				<img src={coder.avatar} alt="{coder.name}" />
 				<Information>
 					<p>Имя: {coder.name}</p>
