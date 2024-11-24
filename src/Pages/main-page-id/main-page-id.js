@@ -7,7 +7,7 @@ import { SelectCoder, SelectClickMoreAboutMe, SelectSocials} from '../../selecto
 import SocialsLogoVK from '../../pictures/socials/VK.svg';
 import SocialsLogoTG from '../../pictures/socials/Telegram.svg';
 import SocialsLogoInstagram from '../../pictures/socials/Instagram.svg';
-import { Badge } from '../../components';
+
 
 const MainPageIdContainer = styled.div`
 	width: 100vw;
@@ -17,7 +17,7 @@ const MainPageIdContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	button:not(:first-child) {
+	button {
 		width: 200px;
 		height: 50px;
 		font-size: 18px;
@@ -134,7 +134,6 @@ export const MainPageId = () => {
 	return (
 		<MainPageIdContainer>
 			<Header>
-				<Badge coderId={id} />
 				<img src={coder.avatar} alt="{coder.name}" />
 				<Information>
 					<p>Имя: {coder.name}</p>
