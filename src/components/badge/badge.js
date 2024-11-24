@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { ReactComponent as Sheriff } from './image/sheriff.svg';
-import { ReactComponent as Support } from './image/support.svg';
+import { ReactComponent as Sheriff } from '../../pictures/icons/sheriff.svg';
+import { ReactComponent as Support } from '../../pictures/icons/support.svg';
 import { ROLE } from './role';
 import { useEffect, useState } from 'react';
 import ReactModal from 'react-modal';
