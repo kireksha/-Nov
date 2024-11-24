@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Header, Footer, Badge } from './components';
+import { Header, Footer } from './components';
 import {MainPage, MainPageId, FavoritePage } from './Pages';
 import styled from 'styled-components';
 
@@ -32,7 +32,6 @@ export const AppContainer = ({ className }) => {
 				</Routes>
 			</Content>
 			<Footer />
-			<Badge />
 		</div>
 	);
 };

@@ -1,8 +1,9 @@
-import styled from 'styled-components';
-import { useEffect, useState } from 'react';
 import { requestGetAllCoders } from './request-get-all-coders/request-get-all-coders';
-import { Link } from 'react-router-dom';
 import { Favorite } from './components/favorite-button/Favorite';
+import { Badge } from '../../components';
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 const MainPageContainer = styled.div`
 	width: 100%;
@@ -30,12 +31,17 @@ const MainPageContainer = styled.div`
 		margin: 10px 0;
 	}
 
-	a:hover {
+	.cards-container_card {
+		position: relative;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.cards-container_card:hover {
 		box-shadow: 15px 10px 10px 10px rgba(0, 0, 0, 0.75);
 		border-radius: 15px;
 	}
 
-	.item_wtrapper {
+	.item_wrapper {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -55,6 +61,12 @@ const MainPageContainer = styled.div`
 		justify-content: center;
 		align-items: center;
 	}
+
+	.badge {
+		position: absolute;
+		right: 20px;
+		top: 10%;
+	}
 `;
 
 export const MainPage = () => {
@@ -65,22 +77,29 @@ export const MainPage = () => {
 
 	return (
 		<MainPageContainer>
-			<h2>162 - ГРУППА  БУДУЩИХ ВЫПУСКНИКОВ RESULT UNIVERSITY!</h2>
+			<h2>162 - ГРУППА БУДУЩИХ ВЫПУСКНИКОВ RESULT UNIVERSITY!</h2>
 			<p>
 				Здесь Вы можете познакомиться с участниками
 				<br /> Хакатона №2 курса "Junior Fronted-разработчик"
 			</p>
 			<div className="cards-container">
 				{coders.map((coder) => (
-					<Link key={coder.id} to={`/coders/${coder.id}`}>
-						<div className="item_wtrapper">
-							<img className="avatar" src={coder.avatar} alt={coder.name} />
-							<div className="item_info">
-								<p>{coder.name}</p>
-								<Favorite user={coder} />
+					<div key={coder.id} className="cards-container_card">
+						<Badge className="badge" coderId={coder.id} />
+						<Link to={`/coders/${coder.id}`}>
+							<div className="item_wrapper">
+								<img
+									className="avatar"
+									src={coder.avatar}
+									alt={coder.name}
+								/>
+								<div className="item_info">
+									<p>{coder.name}</p>
+									<Favorite user={coder} />
+								</div>
 							</div>
-						</div>
-					</Link>
+						</Link>
+					</div>
 				))}
 			</div>
 		</MainPageContainer>

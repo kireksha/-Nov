@@ -1,70 +1,67 @@
-import styled from 'styled-components'
-import { ReactComponent as Sheriff } from './image/sheriff.svg'
-import { ReactComponent as Support } from './image/support.svg'
+import styled from 'styled-components';
+import { ReactComponent as Sheriff } from './image/sheriff.svg';
+import { ReactComponent as Support } from './image/support.svg';
 import { ROLE } from './role';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ReactModal from 'react-modal';
+import { getRole } from '../../bff/api';
+import { ModalContent } from './components/modal/modal';
 
+const BadgeContainer = ({ className, coderId }) => {
+	const [role, setRole] = useState({});
+	useEffect(() => {
+		getRole(coderId).then((data) => setRole(data));
+	}, [coderId]);
 
-const BadgeContainer = ({ className, roleId }) => {
-	const Modal = styled.div`
-		text-align: center;
-	`;
+	const [modalIsOpen, setModalIsOpen] = useState(false);
 
-	const Button = styled.button`
-	    cursor: pointer;
-	`;
-
-	const Div = styled.div`
-		display: flex;
-		justify-content: center;
-		height: 40px;
-	`;
-
-	const [modalIsOpen, setModalIsOpen] = useState(false)
-
-	const openModal = () => {
-		setModalIsOpen(true)
-	}
+	const openModal = (event) => {
+		event.preventDefault();
+		setModalIsOpen(true);
+	};
 
 	const closeModal = () => {
-		setModalIsOpen(false)
-	}
-
-	const modalContent = (
-		<Modal>
-			<h2>Заголовок</h2>
-			<p>Текст модального окна</p>
-			<Button onClick={closeModal}>Закрыть</Button>
-		</Modal>
-	)
-
+		setModalIsOpen(false);
+	};
 
 	return (
-
-		<Div className={className}>
-			{roleId === ROLE.TEAMLEAD ? (
-				<button onClick={openModal}><Sheriff width="35px" height="35px" /></button>)
-				: (<button className='button' onClick={openModal}><Support width="35px" height="35px" /></button>)}
-			<ReactModal ariaHideApp={false} isOpen={modalIsOpen} onRequestClose={closeModal}>
-				{modalContent}
+		<div className={className}>
+			{role.roleId === ROLE.TEAMLEAD ? (
+				<button onClick={openModal}>
+					<Sheriff width="35px" height="35px" />
+				</button>
+			) : (
+				<button className="button" onClick={openModal}>
+					<Support width="50px" height="50px" />
+				</button>
+			)}
+			<ReactModal
+				ariaHideApp={false}
+				isOpen={modalIsOpen}
+				onRequestClose={closeModal}
+			>
+				<ModalContent closeModal={closeModal} role={role} />
 			</ReactModal>
-		</Div >
-	)
-}
+		</div>
+	);
+};
 
 export const Badge = styled(BadgeContainer)`
-& button {
-	border: none;
-    cursor: pointer;
-	background-color: #fff;
-}
+	display: flex;
+	justify-content: center;
+	height: 40px;
 
-& button:active {
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, .5);
-}
+	& button {
+		border: none;
+		cursor: pointer;
+		background-color: #fff;
+	}
 
-& .modal{
-	text-align: center;
-}
+	& button:active {
+		box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+	}
+
+	& .modal {
+		text-align: center;
+	}
 `;
