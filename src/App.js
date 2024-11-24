@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { XDropdown } from './components/ui'
 import { Route, Routes } from 'react-router-dom';
 import { Header, Footer, Badge } from './components';
-import {MainPage, MainPageId } from './Pages';
+import {MainPage, MainPageId, FavoritePage } from './Pages';
 import styled from 'styled-components';
 
 const Content = styled.div`
@@ -30,7 +30,7 @@ export const AppContainer = ({ className }) => {
 					/>
 					<Route
 						path="/favorites"
-						element={<div>Избранные участники по id</div>}
+						element={<FavoritePage />}
 					/>
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
